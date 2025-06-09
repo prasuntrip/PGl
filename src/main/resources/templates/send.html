@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Send Anonymous Message</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif; /* Consistent modern font */
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-blue-500 to-teal-500 flex items-center justify-center min-h-screen p-4">
+
+<div class="bg-white p-8 rounded-3xl shadow-xl w-full max-w-sm sm:max-w-md border border-gray-100">
+  <h2 class="text-3xl font-extrabold text-gray-900 text-center mb-6">
+    Send a message to <span th:text="${username}" class="text-blue-700">someone</span>
+  </h2>
+
+  <form th:action="@{'/send/' + ${username}}" method="post" class="space-y-6">
+        <textarea name="message" rows="5" required
+                  class="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-800 placeholder-gray-400 resize-none transition duration-200"
+                  placeholder="Type your anonymous message here..."></textarea>
+
+    <button type="submit"
+            class="w-full bg-blue-600 text-white py-3 rounded-xl hover:bg-blue-700 transition duration-200 font-semibold text-lg shadow-md">
+      Send Message
+    </button>
+  </form>
+
+  <div th:if="${error}" class="text-red-600 font-medium text-center mt-4" th:text="${error}"></div>
+</div>
+
+</body>
+</html>
