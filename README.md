@@ -35,5 +35,5 @@ This is a clone of the popular NGL (Not Gonna Lie) app built using **Spring Boot
 ### Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/ngl-clone-springboot.git
-cd ngl-clone-springboot
+git clone https://github.com/prasuntrip/pgl.git
+cd pgl
