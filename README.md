@@ -28,9 +28,9 @@ This is a clone of the popular NGL (Not Gonna Lie) app built using **Spring Boot
 
 ### Prerequisites
 
-- Java 17+ (or your target version)
-- Maven or Gradle
-- (Optional) Postman for API testing
+- Java 17+
+- Maven
+
 
 ### Clone the repository
 
